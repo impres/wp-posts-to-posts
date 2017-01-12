@@ -205,6 +205,12 @@
           $td.find('.p2p-icon').css('background-image', '');
         } else {
           remove_row($td);
+          
+          _this.collection.save({
+              's': _this.collection.get('s'),
+              'paged': _this.collection.get('paged')
+          });
+          
         }
       });
     },
